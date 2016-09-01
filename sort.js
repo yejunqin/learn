@@ -33,3 +33,18 @@ function sort_selection(arr){
 	}
 	return arr
 }
+//插入排序
+function sort_insertion(arr){
+	var len = arr.length,
+		value,//当前比较的值
+		i,//未排序部分的当前位置
+		j//已排序部分的当前位置
+	for(i=0;i<len;i++){
+		value = arr[i]
+		for(j= i-1; j > -1 && arr[j] > value; j--){
+			arr[j+1] = arr[j]
+		}
+		arr[j + 1] = value
+	}
+	return arr
+}
